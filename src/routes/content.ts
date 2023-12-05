@@ -1,9 +1,7 @@
 import { Router } from "express";
-import ContentController from "../controllers/content";
+import { createContent, listContents } from "../controllers/content";
 
 const contentRouter = Router();
-
-const { createContent, listContents } = new ContentController();
 
 contentRouter.post("/", createContent);
 contentRouter.get("/", listContents);
